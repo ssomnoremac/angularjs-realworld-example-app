@@ -1,22 +1,18 @@
-<div class="article-preview">
-  <article-meta [article]="article">
-    <favorite-button
-      [article]="article"
-      (onToggle)="onToggleFavorite($event)"
-      class="pull-xs-right">
-      {{article.favoritesCount}}
-    </favorite-button>
-  </article-meta>
+<div class="article-preview row" style="border: 1px solid #ccc; border-radius: 2px; margin: 4px 0; padding: 8px; flex:1; flex-direction: row;" >
+  <div style="flex: 1;">
+    <article-meta [article]="article">
 
-  <a [routerLink]="['/article', article.slug]" class="preview-link">
-    <h1>{{ article.title }}</h1>
-    <p>{{ article.description }}</p>
-    <span>Read more...</span>
-    <ul class="tag-list">
-      <li class="tag-default tag-pill tag-outline"
-        *ngFor="let tag of article.tagList">
-        {{ tag }}
-      </li>
-    </ul>
-  </a>
+    </article-meta>
+    <company-info [article]="article">
+
+    </company-info>
+  </div>
+  <div style="text-align: center; flex: 1;">
+    <h5>Bartender</h5>
+    <p>Today</p>
+    <p>9:00pm - 2:00am</p>
+    <h6 style="color: green;">Ready To Check In</h6>
+    <button type="button" class="btn-primary">Check In</button>
+  </div>
+
 </div>

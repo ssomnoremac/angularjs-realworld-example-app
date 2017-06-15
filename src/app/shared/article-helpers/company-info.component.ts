@@ -3,10 +3,9 @@ import { Component, Input } from '@angular/core';
 import { Article } from '../models';
 
 @Component({
-  selector: 'article-preview',
-  templateUrl: './article-preview.component.html'
+  selector: 'company-info',
+  templateUrl: './company-info.component.html'
 })
-export class ArticlePreviewComponent {
+export class CompanyInfoComponent {
   @Input() article: Article;
-
 }
